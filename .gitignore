@@ -21,3 +21,14 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+target/*
+mvn-clean-wildfly-deploy.bat
+mvn-widgetsets.bat
+.svn
+.settings
+.idea
+.classpath
+.project
+.tern-project
+src/main/webapp/VAADIN/widgetsets

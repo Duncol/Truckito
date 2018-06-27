@@ -1,0 +1,144 @@
+// If you edit this file you need to compile the theme. See README.md for details.
+
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+@charset "UTF-8";
+
+@import "../valo/valo.scss";
+
+@mixin truckito-theme {
+  @include valo;
+
+  // Insert your own theme rules here
+  	.v-menubar-menuitem-main-item {
+  		font-weight: 900;
+  		color: red;
+    	font-size: larger;
+  	}
+  
+	.v-menubar:after {
+    	-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	.v-menubar-menuitem-right-item {
+		float: right;
+	}
+
+	.notepad > .v-spacing {
+		height: 0;
+	}
+
+	.notepad > .v-spacing > .v-button:focus:after{
+		border: none;
+		box-shadow: none;
+	}
+
+	.notepad {
+		position: fixed;
+		bottom: 0;
+		z-index: 9;
+   		-webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    	transition: width 2s, height 4s;
+	}
+
+	.menubar {
+		position: fixed;
+		top: 0;
+		z-index: 9;
+	}
+
+	.v-menubar:focus:after {
+		border: none;
+		box-shadow: none;
+	}
+	.navilayout {
+		padding-top : 0;
+	}
+
+	.chatbox {
+		height: 300px;
+	}
+
+	.side-panel {
+		
+	}
+	.dashboard {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	// PADDINGS
+	.no-left-padding {
+		padding-left: 0;	
+	}
+	.no-top-padding {
+		padding-top: 0;
+	}
+	.no-right-padding {
+		padding-right: 0;
+	}
+	.no-bottom-padding {
+		padding-bottom: 0;
+	}
+	.no-padding {
+		padding: 0;
+	}
+
+	// BORDERS
+	.no-borders {
+		border: none;
+	}
+	.no-shadow {
+		box-shadow: none;
+	}
+
+	.notepad-header {
+		cursor: pointer;
+	}
+	.form-header {
+		font-weight: 700;
+		font-size: 2em;
+	}
+
+	.login-panel {
+		opacity: 0;
+		top: -100px;
+	}
+
+	.wojtas {
+		font-size: xx-large;
+		font-weight: 800;
+	}
+
+	.opacity-0 {
+		opacity: 0;
+	}
+}
